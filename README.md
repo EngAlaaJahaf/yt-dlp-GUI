@@ -6,7 +6,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 [![Sites](https://img.shields.io/badge/Sites-1752-orange)](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)
 
-واجهة رسومية مستقلة لـ **yt-dlp** تدعم **1752 موقع** (YouTube/TikTok/Instagram/Facebook/X...) مع تحميل متوازي لا يعلق، وإضافات متصفح، وحلول ذكية لـ Aparat/Meyon/Udemy.
+واجهة رسومية **قانونية ورسمية** مبنية على المكتبة مفتوحة المصدر **[yt-dlp](https://github.com/yt-dlp/yt-dlp)** (MIT) — للتحميل الشخصي للمحتوى الذي تملك حقوقه أو المرخص لك. تدعم **1752 موقع** (YouTube/TikTok/Instagram/Facebook/X...) مع تحميل متوازي لا يعلق، وإضافات متصفح، وحلول ذكية لـ المواقع المتخصصة.
+
+> **مبني على:** [yt-dlp](https://github.com/yt-dlp/yt-dlp) مفتوحة المصدر (MIT) — للاستخدام القانوني فقط
 
 > **المستودع:** `https://github.com/EngAlaaJahaf/yt-dlp-GUI`
 
@@ -37,7 +39,7 @@
 6. **📝 ترجمة فقط** - --skip-download --write-sub مع اختيار اللغة ar,en والصيغة vtt/srt
 7. **🔌 خادم إضافة** - 127.0.0.1:8765 يستقبل من المتصفح
 8. **🧩 إضافتان** - متكاملة (ترسل لـ GUI) ومستقلة (مباشر mp4)
-9. **🎬 Aparat/Meyon/Udemy** - fallback عبر API زر دانلود و PeerTube HLS
+9. **🎬 المواقع المتخصصة** - fallback عبر API زر دانلود و PeerTube HLS
 10. **🎨 ألوان معبرة** - أخضر تحميل/أحمر إيقاف/أزرق فحص
 
 ---
@@ -81,7 +83,7 @@ cd yt-dlp-GUI
 ```bash
 python -m venv .venv
 # Windows
-.venv\Scripts\activate
+.venvScriptsactivate
 ```
 
 ### 3. التبعيات
@@ -93,7 +95,7 @@ pip install yt-dlp Pillow
 ```bash
 python app.py
 # أو
-.\run.bat
+.run.bat
 ```
 
 ---
@@ -103,8 +105,8 @@ python app.py
 powershell -ExecutionPolicy Bypass -File build_exe.ps1
 ```
 المخرجات:
-- `dist\yt-dlp-GUI\yt-dlp-GUI.exe` — مجلد مستقل (**مستحسن**، يدعم `yt-dlp -U`)
-- `dist\yt-dlp-GUI-Portable.exe` — ملف واحد محمول ~215 MB
+- `distyt-dlp-GUIyt-dlp-GUI.exe` — مجلد مستقل (**مستحسن**، يدعم `yt-dlp -U`)
+- `distyt-dlp-GUI-Portable.exe` — ملف واحد محمول ~215 MB
 
 ---
 
@@ -114,10 +116,10 @@ powershell -ExecutionPolicy Bypass -File build_exe.ps1
 1. افتح `chrome://extensions` أو `edge://extensions`
 2. فعّل `وضع مطوّر البرامج` (Developer mode)
 3. `Load unpacked` → اختر:
-   - **المتكاملة:** `yt-dlp-GUI\extension` (ترسل لـ GUI عبر 127.0.0.1:8765)
-   - **المستقلة:** `yt-dlp-GUI\extension-standalone` (مباشر mp4 فقط)
+   - **المتكاملة:** `yt-dlp-GUIextension` (ترسل لـ GUI عبر 127.0.0.1:8765)
+   - **المستقلة:** `yt-dlp-GUIextension-standalone` (مباشر mp4 فقط)
 4. افتح أي فيديو → كليك يمين `⬇️ تنزيل بهذا التطبيق` أو أيقونة الإضافة → `تنزيل`
-5. **Udemy:** ستظهر خيارات `⬇️ تنزيل مباشر` و `📋 فتح قائمة الكورس كاملة` (1092x700)
+5. **للمحتوى الخاص:** ستظهر خيارات `⬇️ تنزيل مباشر` و `📋 فتح قائمة الكورس كاملة` (1092x700)
 
 > يجب أن يكون `yt-dlp-GUI.exe` مفتوحاً (يستمع على 127.0.0.1:8765)
 
@@ -129,7 +131,7 @@ powershell -ExecutionPolicy Bypass -File build_exe.ps1
 ## 🎮 الاستخدام
 1. الصق الرابط في الحقل العلوي (يدعم عدة روابط كل رابط في سطر) → `➕ إضافة للقائمة`
 2. اختر الجودة/الصيغة في تبويب `⚙️ الإعدادات`
-3. للـ Udemy/المحتوى الخاص: `الكوكيز → chrome → 🔑 التقاط` (أغلق المتصفح إذا فشل)
+3. للمحتوى الخاص المحمي: `الكوكيز → chrome → 🔑 التقاط` (أغلق المتصفح إذا فشل)
 4. حدد فيديوهات من القائمة أو اترك الكل → `▶️ تحميل الكل (متوازي)` أو `⬇️ تحميل الآن` (ذكي)
 5. تابع `السجل والتشخيص` + `⚡ السرعة` في الأعلى وحجم كل فيديو
 
@@ -140,7 +142,7 @@ powershell -ExecutionPolicy Bypass -File build_exe.ps1
 | التحميل | الإعدادات | الإضافة |
 |---------|-----------|---------|
 | ![التحميل](screenshots/download-tab.png) | ![الإعدادات](screenshots/settings-tab.png) | ![الإضافة](screenshots/extension-popup.png) |
-| ![قائمة](screenshots/queue.png) | ![Udemy](screenshots/udemy-window.png) |  |
+| ![قائمة](screenshots/queue.png) | ![القائمة](screenshots/المحتوى الخاص-window.png) |  |
 
 > الصور في `screenshots/` — شغّل `python app.py` والتقط عبر `Win+Shift+S`
 
@@ -153,9 +155,9 @@ yt-dlp-GUI/
 ├── build_exe.ps1          # بناء OneDir/OneFile
 ├── extension/             # إضافة متكاملة (yt-dlp)
 │   ├── manifest.json
-│   ├── background.js      # Udemy مباشر + إرسال لـ GUI
+│   ├── background.js      # تحميل مباشر + إرسال لـ GUI
 │   ├── popup.html/js
-│   └── udemy.html         # قائمة كورس كاملة
+│   └── المحتوى الخاص.html         # قائمة تحميل كاملة
 ├── extension-standalone/  # إضافة مستقلة (مباشر)
 ├── app.ico/icon.png       # الأيقونة المفرغة
 ├── settings.json          # التفضيلات (يُنشأ تلقائياً)
@@ -169,7 +171,7 @@ yt-dlp-GUI/
 |-------|-------|------|
 | `Resolving timed out` | DNS | غيّر DNS لـ 1.1.1.1 / `ipconfig /flushdns` / فعّل `Force IPv4` |
 | `Could not copy Chrome cookie` | Chrome مقفل | أغلق Chrome تماماً Task Manager → أعد `🔑 التقاط` |
-| `403 Forbidden Udemy` | Bearer ناقص | استخدم `--cookies-from-browser` بدل ملف |
+| `403 Forbidden` (محتوى خاص) | مصادقة ناقصة | استخدم `--cookies-from-browser` بدل ملف |
 | `og:title Aparat` | مستخرج معطل | يُحمّل تلقائياً عبر `api file_link_all` |
 | `Unsupported URL meyon` | SPA | استخدم رابط `embed` أو الإضافة المستقلة |
 
