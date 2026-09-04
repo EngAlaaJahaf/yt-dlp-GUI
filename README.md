@@ -141,7 +141,7 @@ powershell -ExecutionPolicy Bypass -File build_exe.ps1
 
 | التحميل | الإعدادات | الإضافة |
 |---------|-----------|---------|
-| ![التحميل](screenshots/download-tab.png) | ![الإعدادات](screenshots/settings-tab.png) | ![الإضافة](screenshots/extension-popup.png) |
+| ![التحميل](screenshots/queue.png) | ![الإعدادات](screenshots/settings-tab.png) | ![الإضافة](screenshots/extension-popup.png) |
 | ![قائمة](screenshots/queue.png) | ![القائمة](screenshots/المحتوى الخاص-window.png) |  |
 
 > الصور في `screenshots/` — شغّل `python app.py` والتقط عبر `Win+Shift+S`
