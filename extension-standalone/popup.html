@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<style>
+*{box-sizing:border-box;font-family:Segoe UI,Tahoma}
+body{width:380px;margin:0;padding:12px;background:#0f1117;color:#eee}
+h1{font-size:14px;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+h1 img{width:20px;height:20px}
+button{width:100%;padding:10px;border:0;border-radius:8px;background:#2563eb;color:#fff;font-weight:700;cursor:pointer}
+button.sec{background:#16a34a;margin-top:6px}
+.list{margin-top:10px;max-height:320px;overflow:auto}
+.item{background:#1a1f2b;border:1px solid #2a2f3a;border-radius:8px;padding:8px;margin-bottom:6px;font-size:12px}
+.item b{color:#fff}
+.item a{color:#60a5fa;word-break:break-all;font-size:11px}
+.item .dl{margin-top:6px;background:#16a34a;padding:6px;border-radius:6px;text-align:center;cursor:pointer}
+.hint{font-size:11px;color:#9aa0aa;margin-top:8px;line-height:1.4}
+.status{margin-top:8px;padding:8px;border-radius:6px;font-size:12px;display:none}
+.status.ok{background:#0b3a1a;color:#86efac;display:block}
+.status.err{background:#3a0b0b;color:#fecaca;display:block}
+</style>
+</head>
+<body>
+<h1><img src="icon48.png"> محمل الفيديو المباشر</h1>
+<button id="scan">🔍 فحص الفيديوهات في الصفحة</button>
+<button id="dlAll" class="sec" style="display:none">⬇️ تحميل الكل</button>
+<div id="list" class="list"></div>
+<div id="status" class="status"></div>
+<div class="hint">يحمل الروابط المباشرة <code>mp4/webm</code> فقط. روابط <code>m3u8/HLS</code> (يوتيوب/تيك توك) تحتاج تطبيقنا مع <code>ffmpeg</code> لدمج المقاطع.</div>
+<script src="popup.js"></script>
+</body>
+</html>

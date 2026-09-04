@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "yt-dlp GUI - تنزيل مباشر",
+  "version": "1.0.0",
+  "description": "أرسل أي فيديو من المتصفح إلى yt-dlp GUI بضغطة واحدة (TikTok/YouTube/Instagram ...)",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "tabs",
+    "cookies",
+    "downloads"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1:8765/*",
+    "*://*.udemy.com/*"
+  ],
+  "action": {
+    "default_title": "تنزيل بهذا التطبيق",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

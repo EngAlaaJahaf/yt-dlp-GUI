@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>yt-dlp GUI</title>
+<style>
+*{box-sizing:border-box;font-family:Segoe UI,Tahoma,Arial}
+body{width:340px;margin:0;padding:14px;background:#0f1117;color:#e6e6e6}
+h1{font-size:15px;margin:0 0 8px;color:#fff;display:flex;align-items:center;gap:8px}
+h1 img{width:20px;height:20px;border-radius:4px}
+.url{width:100%;padding:8px;border-radius:8px;border:1px solid #2a2f3a;background:#1a1f2b;color:#fff;font-size:12px;direction:ltr}
+.btn{width:100%;margin-top:10px;padding:10px;border:0;border-radius:8px;background:#16a34a;color:#fff;font-weight:700;cursor:pointer;font-size:13px}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.sec{background:#2563eb;margin-top:6px}
+.status{margin-top:8px;font-size:12px;padding:8px;border-radius:6px;display:none}
+.status.ok{background:#0b3a1a;color:#86efac;display:block}
+.status.err{background:#3a0b0b;color:#fecaca;display:block}
+.status.warn{background:#3a2a0b;color:#fde68a;display:block}
+.hint{font-size:11px;color:#9aa0aa;margin-top:8px;line-height:1.4}
+.foot{display:flex;gap:6px;margin-top:8px}
+.foot button{flex:1;padding:6px;border-radius:6px;border:1px solid #2a2f3a;background:#1f2533;color:#ccc;cursor:pointer;font-size:11px}
+</style>
+</head>
+<body>
+<h1><img src="icon48.png"> yt-dlp GUI - تنزيل مباشر</h1>
+<input id="url" class="url" placeholder="https://...">
+<button id="dl" class="btn">⬇️ تنزيل بهذا التطبيق</button>
+<div id="udemyBox" style="display:none">
+  <button id="udemyDirect" class="btn" style="background:#e67e22">⬇️ Udemy: تنزيل هذا الفيديو مباشرة</button>
+  <button id="udemyList" class="btn sec" style="background:#8e44ad">📋 Udemy: فتح قائمة الكورس كاملة</button>
+</div>
+<button id="copy" class="btn sec">📋 نسخ الرابط</button>
+<div id="status" class="status"></div>
+<div class="hint">يجب أن يكون التطبيق مفتوحاً (يستمع على 127.0.0.1:8765). يدعم TikTok/YouTube/Instagram ...</div>
+<div class="foot">
+  <button id="ping">فحص الاتصال</button>
+  <button id="open">فتح مجلد التحميل</button>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+// background.js - service worker for yt-dlp GUI extension
+const API = "http://127.0.0.1:8765";
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({ id: "dl-page", title: "⬇️ تنزيل هذه الصفحة بهذا التطبيق", contexts: ["page"] });
+  chrome.contextMenus.create({ id: "dl-link", title: "⬇️ تنزيل هذا الرابط", contexts: ["link"] });
+  chrome.contextMenus.create({ id: "dl-video", title: "⬇️ تنزيل هذا الفيديو", contexts: ["video", "audio"] });
+  chrome.contextMenus.create({ id: "dl-selection", title: "⬇️ تنزيل الرابط المحدد", contexts: ["selection"] });
+});
+
+async function sendToApp(url) {
+  if (!url || !/^https?:\/\//.test(url)) return { ok: false, error: "رابط غير صالح" };
+  try {
+    const r = await fetch(`${API}/download`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ url })
+    });
+    const j = await r.json().catch(() => ({}));
+    if (r.ok) return { ok: true, data: j };
+    return { ok: false, error: j.error || `HTTP ${r.status}` };
+  } catch (e) {
+    return { ok: false, error: "التطبيق غير مشغّل. افتح yt-dlp GUI أولاً (يجب أن يعمل على 127.0.0.1:8765)" };
+  }
+}
+
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
+  let url = info.linkUrl || info.srcUrl || info.pageUrl;
+  if (info.selectionText && /^https?:\/\//.test(info.selectionText.trim())) url = info.selectionText.trim();
+  const res = await sendToApp(url);
+  if (res.ok) {
+    chrome.notifications?.create({ type: "basic", iconUrl: "icon128.png", title: "تم الإرسال ✅", message: url.slice(0,120) });
+  } else {
+    // fallback: open popup to show error
+    console.warn(res.error);
+  }
+});
+
+// allow popup to call via message
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+  if (msg.action === "download") {
+    sendToApp(msg.url).then(sendResponse);
+    return true;
+  }
+  if (msg.action === "ping") {
+    fetch(`${API}/ping`).then(r=>r.json()).then(j=>sendResponse({ok:true,j})).catch(()=>sendResponse({ok:false}));
+    return true;
+  }
+});

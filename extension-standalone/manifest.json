@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Video Downloader - Standalone",
+  "version": "1.0.0",
+  "description": "يحمل الفيديوهات المباشرة (mp4/webm) من أي صفحة بدون تطبيق خارجي",
+  "permissions": ["activeTab", "downloads", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "تحميل الفيديوهات المباشرة",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" }
+  },
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" }
+}

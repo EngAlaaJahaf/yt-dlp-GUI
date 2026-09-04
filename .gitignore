@@ -1,0 +1,15 @@
+# Build
+dist/
+build/
+__pycache__/
+*.pyc
+*.pyo
+*.spec
+# OS
+Thumbs.db
+.DS_Store
+# Settings (user-specific)
+settings.json
+# Large binaries (user builds locally)
+*.exe
+*.bin
