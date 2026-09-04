@@ -1,4 +1,4 @@
-# ⬇️ محمل الفيديو الشامل - yt-dlp GUI
+# ⬇️ محمل الفيديو - yt-dlp GUI
 
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-blue)](https://python.org)
 [![yt-dlp](https://img.shields.io/badge/yt--dlp-2026.08.19-red)](https://github.com/yt-dlp/yt-dlp)
@@ -6,31 +6,31 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 [![Sites](https://img.shields.io/badge/Sites-1752-orange)](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)
 
-واجهة رسومية **قانونية ورسمية** مبنية على المكتبة مفتوحة المصدر **[yt-dlp](https://github.com/yt-dlp/yt-dlp)** (MIT) — للتحميل الشخصي للمحتوى الذي تملك حقوقه أو المرخص لك. تدعم **1752 موقع** (YouTube/TikTok/Instagram/Facebook/X...) مع تحميل متوازي لا يعلق، وإضافات متصفح، وحلول ذكية لـ المواقع المتخصصة.
+واجهة رسومية ** ورسمية** مبنية على المكتبة مفتوحة المصدر **[yt-dlp](https://github.com/yt-dlp/yt-dlp)** (MIT) — للتحميل الشخصي للمحتوى الذي تملك حقوقه أو المرخص لك. تدعم **1752 موقع** (YouTube/TikTok/Instagram/Facebook/X...) مع تحميل متوازي لا يعلق، وإضافات متصفح، وحلول ذكية لـ المواقع المتخصصة.
 
-> **مبني على:** [yt-dlp](https://github.com/yt-dlp/yt-dlp) مفتوحة المصدر (MIT) — للاستخدام القانوني فقط
+> **مبني على:** [yt-dlp](https://github.com/yt-dlp/yt-dlp) مفتوحة المصدر (MIT) — للاستخدام فقط
 
 > **المستودع:** `https://github.com/EngAlaaJahaf/yt-dlp-GUI`
 
 ---
 
 ## 📑 جدول المحتويات
-- [المميزات](#-المميزات)
+- [ماذا يقدم](#-ماذا يقدم)
 - [المواقع المدعومة](#-المواقع-المدعومة)
-- [التقنيات](#-التقنيات)
-- [المتطلبات](#-المتطلبات)
-- [التثبيت والتشغيل](#-التثبيت-والتشغيل)
-- [بناء exe مستقل](#-بناء-exe-مستقل)
+- [ماذا استخدمنا](#-ماذا استخدمنا)
+- [تحتاج ايش](#-تحتاج ايش)
+- [كيف تشغله](#-التثبيت-والتشغيل)
+- [كيف تبني نسخة exe](#-بناء-exe-مستقل)
 - [إضافة المتصفح](#-إضافة-المتصفح)
-- [الاستخدام](#-الاستخدام)
-- [لقطات الشاشة](#-لقطات-الشاشة)
-- [هيكل المشروع](#-هيكل-المشروع)
-- [استكشاف الأخطاء](#-استكشاف-الأخطاء)
+- [كيف تستخدمه](#-كيف تستخدمه)
+- [صور التطبيق](#-لقطات-الشاشة)
+- [ملفات المشروع](#-هيكل-المشروع)
+- [مشاكل شائعة](#-استكشاف-الأخطاء)
 - [الترخيص](#-الترخيص)
 
 ---
 
-## ✨ المميزات
+## ✨ ماذا يقدم
 1. **⬇️ تحميل بضغطة** - الصق الرابط فقط، كشف تلقائي 🎵 TikTok / ▶️ YouTube
 2. **⚡ متوازي 1-5** - قائمة انتظار مع شريط لكل فيديو، لا يعلق الواجهة
 3. **⚙️ تبويبات** - ⬇️ التحميل و ⚙️ الإعدادات (جودة/صيغة/مجلد/كوكيز/Proxy)
@@ -45,12 +45,12 @@
 ---
 
 ## 🌐 المواقع المدعومة
-1752 مستخرج — كل مواقع yt-dlp: YouTube/TikTok/Vimeo/Dailymotion/Instagram/Facebook/X/SoundCloud/Twitch/Kick/...  
+1752 مستخرج — كل مواقع yt-dlp: YouTube/TikTok/Vimeo/Dailymotion/Instagram/Facebook/X/SoundCloud/Twitch/Kick/... 
 القائمة: `yt-dlp --list-extractors` أو [supportedsites.md](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md)
 
 ---
 
-## 🛠 التقنيات
+## 🛠 ماذا استخدمنا
 | المكون | التقنية |
 |--------|---------|
 | GUI | Python 3.11 + Tkinter (clam) |
@@ -60,7 +60,7 @@
 
 ---
 
-## 📋 المتطلبات
+## 📋 تحتاج ايش
 | المتطلب | الإصدار |
 |---------|---------|
 | Python | 3.11+ |
@@ -71,7 +71,7 @@
 
 ---
 
-## 🚀 التثبيت والتشغيل
+## 🚀 كيف تشغله
 
 ### 1. استنساخ
 ```bash
@@ -100,7 +100,7 @@ python app.py
 
 ---
 
-## 📦 بناء exe مستقل
+## 📦 كيف تبني نسخة exe
 ```powershell
 powershell -ExecutionPolicy Bypass -File build_exe.ps1
 ```
@@ -116,8 +116,8 @@ powershell -ExecutionPolicy Bypass -File build_exe.ps1
 1. افتح `chrome://extensions` أو `edge://extensions`
 2. فعّل `وضع مطوّر البرامج` (Developer mode)
 3. `Load unpacked` → اختر:
-   - **المتكاملة:** `yt-dlp-GUIextension` (ترسل لـ GUI عبر 127.0.0.1:8765)
-   - **المستقلة:** `yt-dlp-GUIextension-standalone` (مباشر mp4 فقط)
+ - **ة:** `yt-dlp-GUIextension` (ترسل لـ GUI عبر 127.0.0.1:8765)
+ - **المستقلة:** `yt-dlp-GUIextension-standalone` (مباشر mp4 فقط)
 4. افتح أي فيديو → كليك يمين `⬇️ تنزيل بهذا التطبيق` أو أيقونة الإضافة → `تنزيل`
 5. **للمحتوى الخاص:** ستظهر خيارات `⬇️ تنزيل مباشر` و `📋 فتح قائمة الكورس كاملة` (1092x700)
 
@@ -128,7 +128,7 @@ powershell -ExecutionPolicy Bypass -File build_exe.ps1
 
 ---
 
-## 🎮 الاستخدام
+## 🎮 كيف تستخدمه
 1. الصق الرابط في الحقل العلوي (يدعم عدة روابط كل رابط في سطر) → `➕ إضافة للقائمة`
 2. اختر الجودة/الصيغة في تبويب `⚙️ الإعدادات`
 3. للمحتوى الخاص المحمي: `الكوكيز → chrome → 🔑 التقاط` (أغلق المتصفح إذا فشل)
@@ -137,7 +137,7 @@ powershell -ExecutionPolicy Bypass -File build_exe.ps1
 
 ---
 
-## 📸 لقطات الشاشة
+## 📸 صور التطبيق
 
 | الإعدادات | الإضافة |
 |-----------|---------|
@@ -146,25 +146,25 @@ powershell -ExecutionPolicy Bypass -File build_exe.ps1
 > الصور في `screenshots/` — شغّل `python app.py` والتقط عبر `Win+Shift+S`
 
 
-## 📁 هيكل المشروع
+## 📁 ملفات المشروع
 ```
 yt-dlp-GUI/
-├── app.py                 # الواجهة + الخادم + المتوازي
-├── build_exe.ps1          # بناء OneDir/OneFile
-├── extension/             # إضافة متكاملة (yt-dlp)
-│   ├── manifest.json
-│   ├── background.js      # تحميل مباشر + إرسال لـ GUI
-│   ├── popup.html/js
-│   └── المحتوى الخاص.html         # قائمة تحميل كاملة
-├── extension-standalone/  # إضافة مستقلة (مباشر)
-├── app.ico/icon.png       # الأيقونة المفرغة
-├── settings.json          # التفضيلات (يُنشأ تلقائياً)
-└── dist/                  # المخرجات (مُستبعد من git)
+├── app.py   # الواجهة + الخادم + المتوازي
+├── build_exe.ps1  # بناء OneDir/OneFile
+├── extension/  # إضافة متكاملة (yt-dlp)
+│ ├── manifest.json
+│ ├── background.js # تحميل مباشر + إرسال لـ GUI
+│ ├── popup.html/js
+│ └── المحتوى الخاص.html  # قائمة تحميل كاملة
+├── extension-standalone/ # إضافة مستقلة (مباشر)
+├── app.ico/icon.png # الأيقونة المفرغة
+├── settings.json  # التفضيلات (يُنشأ تلقائياً)
+└── dist/   # المخرجات (مُستبعد من git)
 ```
 
 ---
 
-## 🔍 استكشاف الأخطاء
+## 🔍 مشاكل شائعة
 | الخطأ | السبب | الحل |
 |-------|-------|------|
 | `Resolving timed out` | DNS | غيّر DNS لـ 1.1.1.1 / `ipconfig /flushdns` / فعّل `Force IPv4` |
